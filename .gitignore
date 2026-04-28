@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE/editor
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Experiment outputs
+checkpoints/
+results/
+logs/
+wandb/
+runs/
+*.pt
+*.pth
+*.ckpt
+
+# Large/local data
+*.npy
+*.npz
+*.h5
+*.hdf5
