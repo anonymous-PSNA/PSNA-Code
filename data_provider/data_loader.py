@@ -14,7 +14,6 @@ class Dataset_ETT_hour(Dataset):
     def __init__(self, root_path, flag='train', size=None,
                  features='S', data_path='ETTh1.csv',
                  target='OT', scale=True, timeenc=0, freq='h', seasonal_patterns=None):
-        #scale：是否进行归一化
         # size [seq_len, label_len, pred_len]
         # info
         if size == None:
@@ -55,7 +54,6 @@ class Dataset_ETT_hour(Dataset):
             df_data = df_raw[cols_data]
         elif self.features == 'S':
             df_data = df_raw[[self.target]]
-        #df_data是特征列
 
         if self.scale:
             train_data = df_data[border1s[0]:border2s[0]]
@@ -95,7 +93,6 @@ class Dataset_ETT_hour(Dataset):
 
     def __len__(self):
         return len(self.data_x) - self.seq_len - self.pred_len + 1
-    #计算出有多少个不重叠（或部分重叠）的时间窗口
 
     def inverse_transform(self, data):
         return self.scaler.inverse_transform(data)

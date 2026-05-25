@@ -15,7 +15,6 @@ import os
 class Model(nn.Module):
     def __init__(self, configs):
         super(Model, self).__init__()
-        #基础参数的设置
         self.seq_len = configs.seq_len
         self.input_len = configs.seq_len
         self.d_model = configs.d_model
@@ -74,7 +73,6 @@ class Model(nn.Module):
         self.FC4 = nn.Linear(configs.seq_len * 1, configs.pred_len)
 
 
-    #时间维度分支
         self.nfft_min = configs.nfft_min
         self.hidden_dims = configs.hidden_dims
         self.n_stft_branch=configs.n_stft_branch

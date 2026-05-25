@@ -97,7 +97,7 @@ class GCN(torch.nn.Module):
         x = x2.reshape(B, M, d_model)
 
 
-        enc_out_vari_trans = self.Transformer_encoder_2(enc_out_vari, x, mask=None)    # x作为V，K矩阵，enc_out_vari_embeding作为Q矩阵
+        enc_out_vari_trans = self.Transformer_encoder_2(enc_out_vari, x, mask=None)
 
 
         return enc_out_vari_trans

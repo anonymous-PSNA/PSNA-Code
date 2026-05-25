@@ -319,7 +319,6 @@ class Exp_Long_Term_Forecast(Exp_Basic):
         import matplotlib
         matplotlib.use('Agg')
 
-        # 样式
         plt.rcParams.update({
             'font.family':       'DejaVu Sans',
             'font.size':         10,
@@ -354,5 +353,5 @@ class Exp_Long_Term_Forecast(Exp_Basic):
         plt.savefig(pdf_path)
         plt.savefig(png_path)
         plt.close()
-        print(f'[可视化] {pdf_path}')
-        print(f'[可视化] {png_path}')
+        print(f'[Visualization] {pdf_path}')
+        print(f'[Visualization] {png_path}')

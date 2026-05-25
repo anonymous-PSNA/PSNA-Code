@@ -38,7 +38,6 @@ for p in 96; do
           --enc_weight 0.0 \
           --gcn_weight 1.0
 done
-# 循环遍历预测长度
 for p in 192; do
     echo "Running for pred_len: $p"
     python -u run.py \
